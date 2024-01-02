@@ -78,6 +78,9 @@ const RegisterForm = () => {
         <img src="/assets/images/logo.png" width={150} alt="logo" />
 
         <h2 className="h3-bold md:h2-bold">Create a new account</h2>
+        <p className="text-light-4 small-medium md:base-regular">
+          To use Talkit please enter your account details
+        </p>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
           className="flex flex-col gap-5 w-full mt-4"

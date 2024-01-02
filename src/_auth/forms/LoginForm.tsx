@@ -63,7 +63,7 @@ const LoginForm = () => {
         <img src="/assets/images/logo.png" width={150} alt="logo" />
 
         <h2 className="h3-bold md:h2-bold">Login to your account</h2>
-        <p className="text-light-3 small-medium md:base-regular">
+        <p className="text-light-4 small-medium md:base-regular">
           welcome back please enter your account details
         </p>
         <form
