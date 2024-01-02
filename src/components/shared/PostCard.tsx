@@ -4,12 +4,20 @@ import { Link } from "react-router-dom";
 import PostStats from "./PostStats";
 import { multiFormatDateString } from "@/lib/utils";
 import { useUserContext } from "@/context/AuthContext";
+import { useState } from "react";
+import Skeleton from "react-loading-skeleton";
 
 type PostCardProps = {
   post: Models.Document;
 };
 
 const PostCard = ({ post }: PostCardProps) => {
+  const [loading, setLoading] = useState(true);
+
+  const handleImageLoad = () => {
+    setLoading(false);
+  };
+
   const { user } = useUserContext();
 
   if (!post.creator) return;
@@ -69,11 +77,17 @@ const PostCard = ({ post }: PostCardProps) => {
             ))}
           </ul>
         </div>
-
+        {loading && <Skeleton style={{ width: "100%", height: "100%" }} />}
         <img
           src={post.imageUrl || "/assets/icons/profile-placeholder.svg"}
+          onLoad={handleImageLoad}
           alt="post image"
           className="post-card_img"
+          style={{
+            display: loading ? "none" : "block",
+            width: "100%",
+            height: "100%",
+          }}
         />
       </Link>
 
