@@ -15,7 +15,7 @@ const PostCard = ({ post }: PostCardProps) => {
   if (!post.creator) return;
 
   return (
-    <div className="">
+    <div className="post-card mb-10">
       <div className="flex-between">
         <div className="flex items-center gap-3">
           <Link to={`/profile/${post.creator.$id}`}>
@@ -47,13 +47,13 @@ const PostCard = ({ post }: PostCardProps) => {
 
         <Link
           to={`/update-post/${post.$id}`}
-          className={`${user.id !== post.creator.$id && "hidden"}`}>
+          className={`${user.id !== post.creator.$id && "hidden"}`}
+        >
           <img
-            src="/assets/icons/edit.svg"
-            width={25}
-            height={25}
+            src={"/assets/icons/edit.svg"}
             alt="edit"
-            className="invert-white"
+            width={20}
+            height={20}
           />
         </Link>
       </div>

@@ -96,11 +96,11 @@ const PostDetails = () => {
                   className={`${user.id !== post?.creator.$id && "hidden"}`}
                 >
                   <img
-                    src={"/assets/icons/edit.svg"}
+                    src="/assets/icons/edit.svg"
                     width={24}
                     height={24}
                     alt="edit"
-                    className="invert-white"
+                    className=""
                   />
                 </Link>
 
