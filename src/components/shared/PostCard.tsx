@@ -82,11 +82,10 @@ const PostCard = ({ post }: PostCardProps) => {
           src={post.imageUrl || "/assets/icons/profile-placeholder.svg"}
           onLoad={handleImageLoad}
           alt="post image"
-          className="post-card_img"
+          className="post-card_img mb-5"
           style={{
             display: loading ? "none" : "block",
             width: "100%",
-            height: "100%",
           }}
         />
       </Link>

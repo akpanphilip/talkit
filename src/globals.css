@@ -183,7 +183,7 @@
   }
 
   .profile-tab {
-    @apply flex-center gap-3 py-4 w-48 bg-dark-2  transition flex-1 xl:flex-initial;
+    @apply flex-center gap-3 py-3 w-10 bg-dark-2  transition flex-1 xl:flex-initial;
   }
 
   /* Saved */
@@ -233,7 +233,7 @@
 
   /* Post Card */
   .post-card {
-    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full ;
+    @apply bg-dark-2 rounded-3xl border border-dark-4 p-5 lg:p-7 w-full h-auto;
   }
 
   .post-card_img {
